@@ -5,6 +5,10 @@
 #include "SocketPoseClient.h"
 #include "TimeUtil.h"
 
+#if defined(USE_PROTOBUF)
+#include <google/protobuf/stubs/common.h>
+#endif
+
 using namespace std;
 
 void sendPoseFromFakePoseGenerator()
@@ -70,6 +74,8 @@ void printInfo()
 {
 #if defined(USE_PROTOBUF)
     printf("USE_PROTOBUF: true\n");
+    printf("GOOGLE_PROTOBUF_VERSION: %d\n", GOOGLE_PROTOBUF_VERSION);
+    printf("VersionString: %s\n", google::protobuf::internal::VersionString(GOOGLE_PROTOBUF_VERSION).c_str());
 #else
     printf("USE_PROTOBUF: false\n");
 #endif
