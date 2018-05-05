@@ -1,0 +1,12 @@
+syntax = "proto3"; // 2.6.1
+
+package vr; 
+message Pose 
+{ 
+   float     pos_x = 1;  // pos x
+   float     pos_y = 2;  // pos y
+   float     pos_z = 3;  // pos z
+   float     euler_x = 4;  // euler x
+   float     euler_y = 5;  // euler y
+   float     euler_z = 6;  // euler z
+}
