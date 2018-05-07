@@ -1,4 +1,4 @@
-syntax = "proto3"; // 2.6.1
+syntax = "proto3";
 
 package vr; 
 message Pose 
